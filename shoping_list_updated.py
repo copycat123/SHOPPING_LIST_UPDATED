@@ -60,8 +60,8 @@ def show_list():
 
 
 def remove_from_list():
-    show_list()
-    what_to_remove = input("What would you like to remove?\n>")
+
+    what_to_remove = input("What would you like to remove?\n> ")
     try:
         shopping_list.remove(what_to_remove)
     except ValueError:
