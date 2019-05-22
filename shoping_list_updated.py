@@ -31,7 +31,7 @@ def add_to_list(item):
     if len(shopping_list):
         position = input("Where should i add {}?\n"
                          "Press ENTER to add to the end of the list\n"
-                         ">".format(item))
+                         "> ".format(item))
     else:
         position = 0
     try:
@@ -60,7 +60,7 @@ def show_list():
 
 
 def remove_from_list():
-
+    show_list()
     what_to_remove = input("What would you like to remove?\n> ")
     try:
         shopping_list.remove(what_to_remove)
@@ -73,19 +73,19 @@ show_help()
 # Fourth operation:
 
 while True:
-    print("Add more items:")  # Ask user to add more items
+    print("Add or remove items:")  # Ask user to add more items
     new_item = input("> ")
 
     # Added empty string if user didn't enter any items
     if new_item.upper() == "DONE" or new_item.upper() == "":
         break
-    elif new_item.upper == "HELP":
+    elif new_item.upper() == "HELP":
         show_help()
         continue
-    elif new_item.upper == "SHOW":
+    elif new_item.upper() == "SHOW":
         show_list()
         continue
-    elif new_item.upper == "REMOVE":
+    elif new_item.upper() == "REMOVE":  # The brackets are important
         remove_from_list()
     else:
         add_to_list(new_item)
