@@ -52,11 +52,19 @@ def show_list():
 
     clear_screen()
     print('Here is your shoping list:')
-    index = 1
-    for item in shopping_list:
+
+    # SAME AS LINE 62 BUT WITH TUPLE OPERATION
+    for index, item in enumerate(shopping_list, start=1):
+        # print(item)
         print("{}. {}".format(index, item))
-        index += 1
+
     print("-" * 10)
+
+    # index = 1
+    # for item in shopping_list:
+    #     print("{}. {}".format(index, item))
+    #     index += 1
+    # print("-" * 10)
 
 
 def remove_from_list():
